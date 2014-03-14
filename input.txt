@@ -1,1 +1,8 @@
+#filename_to_be_splitted -f ruleset_file1.txt ruleset_file2.txt ... -c COLUMN_NO_1_to_match COLUMN_NO_2_to_match -d delimiter
+#i.e 
+#student_list.csv -f set1.txt -c 10 -d ,
 
+# You can also specify multiple files each on new line.
+#i.e 
+#student_list.csv -f set1.txt -c 10 -d ,
+#teachers_list.csv -f set1.txt set2.txt -c 10 12 -d -
