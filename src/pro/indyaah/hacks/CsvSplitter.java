@@ -15,6 +15,11 @@ import java.util.List;
 
 public class CsvSplitter {
 
+    /** Takes input file name as argumenet.
+     *  Input file contains space seperated values (just like command line arguments)
+     *  See input.txt for example.
+      * @param args
+     */
     public static void main(String[] args) {
         BufferedReader br = null;
         try {
@@ -22,7 +27,9 @@ public class CsvSplitter {
             HashSet<String> keywords = new HashSet<String>();
             br = new BufferedReader(new FileReader("input.txt"));
             while ((sCurrentLine = br.readLine()) != null) {
-                process(sCurrentLine);
+                if (!sCurrentLine.startsWith("#")) {
+                    process(sCurrentLine);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
